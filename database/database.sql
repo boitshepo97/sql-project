@@ -28,25 +28,25 @@ VALUES (3, 'Gideon', 'Maduku', 'm@gmail.com','Accountant');
 
 -- FOR ORDERS TABLE
 
-INSERT INTO OrdersTable(OrderId, ProductID, PaymentID, FulfilledByEmployeeID, DateRequired, Status)
-VALUES (1, 1, 1, 2, 05-09-2018	, 'Not shipped');
+INSERT INTO OrdersTable(OrderId, ProductID, PaymentID, FulfilledByEmployeeID, DateRequired, DateShipped, Status)
+VALUES (1, 1, 1, 2, '2018-09-05', Null, 'Not shipped');
 
 INSERT INTO OrdersTable(OrderId, ProductID, PaymentID, FulfilledByEmployeeID, DateRequired, DateShipped, Status)
-VALUES (2, 1, 2, 2, 04-09-2018, 03-09-2018, 'Shipped');
+VALUES (2, 1, 2, 2, '2018-09-04', '2018-09-03', 'Shipped');
 
-INSERT INTO OrdersTable(OrderId, ProductID, PaymentID, FulfilledByEmployeeID, DateRequired, Status)
-VALUES (3, 3, 3, 3, 06-09-2018	, 'Not shipped');
+INSERT INTO OrdersTable(OrderId, ProductID, PaymentID, FulfilledByEmployeeID, DateRequired, DateShipped, Status)
+VALUES (3, 3, 3, 3, '2018-09-06', Null,'Not shipped');
 
 -- FOR PAYMENTS TABLE 
 
 INSERT INTO PaymentsTable (CustomerId, PaymentID, PaymentDate, Amount)
-VALUES (1, 1, 01-09-2018, 150.75);
+VALUES (1, 1, '2018-09-01', 150.75);
 
 INSERT INTO PaymentsTable (CustomerId, PaymentID, PaymentDate, Amount)
-VALUES (5, 2, 03-09-2018, 150.75);
+VALUES (5, 2, '2018-09-03', 150.75);
 
 INSERT INTO PaymentsTable (CustomerId, PaymentID, PaymentDate, Amount)
-VALUES (4, 3, 03-09-2018, 700.60);
+VALUES (4, 3, '2018-09-03', 700.60);
 
 -- FOR PRODUCTS TABLE
 
