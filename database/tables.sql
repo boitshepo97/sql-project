@@ -10,7 +10,6 @@ CREATE TABLE CustomersTable(
     Country varchar(50)
 );
 
-
 CREATE TABLE EmloyeesTable(
     EmployeeID int,
     FirstName varchar(50),
@@ -25,8 +24,8 @@ CREATE TABLE OrdersTable(
     ProductID int,
     PaymentID int,
     FulfilledByEmployeeID int,
-    DateRequired timestamp,
-    DateShipped timestamp,
+    DateRequired date,
+    DateShipped date,
     Status varchar(20),
     FOREIGN KEY(EmployeeID) REFERENCES artists(ProductID)
 );
@@ -34,7 +33,7 @@ CREATE TABLE OrdersTable(
 CREATE TABLE PaymentsTable(
     CustomerId int,
     PaymentID int,
-    PaymentDate timestamp,
+    PaymentDate date,
     Amount decimal
 );
 

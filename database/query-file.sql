@@ -1,50 +1,50 @@
--- All records
-SELECT * from CustomersTable
+-- * records
+SELECT * from CustomersTable;
 
 -- Name column
-SELECT FirstName, LastName from CustomersTable
+SELECT FirstName, LastName from CustomersTable;
 
 -- CustomerID = 1
-SELECT FirstName, Customer FROM CustomersTable WHERE CustomerId = 1
+SELECT FirstName, LastName FROM CustomersTable WHERE CustomerId = 1;
 
 -- Update Lerato Mabitso 
 UPDATE CustomersTable SET FirstName = Lerato, LastName = Mabitso WHERE CustomerID = 1;
 
 -- Delete
-DELETE FROM CustomersTable WHERE CustomerID = 2
+DELETE FROM CustomersTable WHERE CustomerID = 2;
 
 -- Unique
-SELECT SUM(Status) FROM OrdersTable WHERE Status = Null;
+SELECT Distinct Status From OrdersTable;
 
 -- Return
-SELECT MAX(Amount) AS LargestPayment FROM PaymentsTable
+SELECT MAX(Amount) AS LargestPayment FROM PaymentsTable;
 
 -- Sort Country
-SELECT FirstName, LastName FROM CustomersTable ORDER BY Country ASC
+SELECT FirstName, LastName FROM CustomersTable ORDER BY Country ASC;
 
 -- Price range R100 - R600
-SELECT all products with a price BETWEEN R100 and R600.
+SELECT * FROM ProductsTable WHERE BuyPrice BETWEEN 100 and 600;
 
 -- Germany & Berlin
-SELECT all fields from “Customers” where country is “Germany” AND city is “Berlin”.
+SELECT * FROM Customers WHERE Country = 'Germany' and City = 'Berlin';
 
 -- Cape Town or Durban
-SELECT all fields from “Customers” where city is “Cape Town” OR “Durban”.
+SELECT * FROM CustomersTable WHERE City= 'Cape town' OR City='Durban';
 
 -- Price range R500>
-SELECT all records from Products where the Price is GREATER than R500.
+SELECT * FROM ProductsTable WHERE BuyPrice > 500;
 
 -- Sum of payments
-RETURN the sum of the Amounts on the Payments table.
+SELECT SUM(Amount) FROM PaymentsTable;
 
 -- Number of orders
-Count the number of shipped orders in the Orders table.
+SELECT COUNT(Status) FROM OrdersTable WHERE status = 'Shipped';
 
 -- Average price
-RETURN the average price of all Products, in Rands and in Dollars (assume the exchange rate is R12 to the Dollar).
+SELECT AVG(BuyPrice/12) AS  AverageDollars, AVG(BuyPrice) AS  Average_Rand FROM ProductsTable;
 
 -- Inner Join
-Using INNER JOIN create a query that SELECTs all Payments with Customer information.
+SELECT * FROM CustomersTable INNER JOIN Payments ON Payments.CustomerID = Customers.CustomerID;
 
 -- Turnable Front Wheels
-SELECT all products that have turnable front wheels.
+SELECT * FROM ProductsTable WHERE description = 'Turnable front wheels, steering function'
