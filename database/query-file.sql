@@ -44,7 +44,7 @@ SELECT COUNT(Status) FROM OrdersTable WHERE status = 'Shipped';
 SELECT AVG(BuyPrice/12) AS  AverageDollars, AVG(BuyPrice) AS  Average_Rand FROM ProductsTable;
 
 -- Inner Join
-SELECT * FROM CustomersTable INNER JOIN Payments ON Payments.CustomerID = Customers.CustomerID;
+SELECT * FROM CustomersTable INNER JOIN PaymentsTable ON PaymentsTable.CustomerID = CustomersTable.CustomerID;
 
 -- Turnable Front Wheels
 SELECT * FROM ProductsTable WHERE description = 'Turnable front wheels, steering function'
